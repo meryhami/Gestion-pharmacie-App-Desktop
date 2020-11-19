@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="a" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="1106.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <Pane prefHeight="119.0" prefWidth="1106.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="employer" layoutX="418.0" layoutY="119.0" prefHeight="25.0" prefWidth="174.0" />
+            <JFXPasswordField fx:id="p" layoutX="428.0" layoutY="207.0" prefHeight="25.0" prefWidth="174.0" />
+            <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="370.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@login.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="372.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@password.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="370.0" layoutY="35.0" prefHeight="30.0" prefWidth="723.0" text="Attention seulement le pharmacien qui peux acceder a ce champs la !!!!!!" textFill="#460707" />
+            <JFXButton layoutX="440.0" layoutY="309.0" onAction="#entrer2" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: pink;" text="Entrer " textFill="#1d0d43">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="entre2" layoutX="344.0" layoutY="396.0" prefHeight="17.0" prefWidth="392.0" text="Le login ou le mot de passe est incorrect !!!!" textFill="#610f0f" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="334.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@attention.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

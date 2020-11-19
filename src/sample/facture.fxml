@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="1150.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView fx:id="table" layoutX="393.0" layoutY="177.0" prefHeight="165.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="136.0" text="id" />
+          <TableColumn fx:id="id_medica" minWidth="0.0" prefWidth="198.0" text="id_medica" />
+            <TableColumn fx:id="Date" minWidth="0.0" prefWidth="85.0" text="Date " />
+            <TableColumn fx:id="quantite" prefWidth="136.0" text="quantité" />
+        </columns>
+      </TableView>
+      <Label layoutX="405.0" layoutY="106.0" prefHeight="56.0" prefWidth="204.0" text="Facture vente  numero :" textFill="#1e085b">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="730.0" layoutY="124.0" prefHeight="20.0" prefWidth="73.0" text="Faite le :" textFill="#150a4d">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="kl" layoutX="803.0" layoutY="124.0" prefHeight="27.0" prefWidth="149.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="facnum" layoutX="557.0" layoutY="125.0" prefHeight="17.0" prefWidth="86.0">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <JFXTextField fx:id="ffacture" layoutX="14.0" layoutY="115.0" prefHeight="25.0" prefWidth="137.0" />
+      <JFXButton fx:id="enre" layoutX="216.0" layoutY="125.0" onAction="#ajouterf" style="-fx-background-color: pink;" text="Enregistrer" />
+      <Label fx:id="k" layoutX="413.0" layoutY="407.0" prefHeight="34.0" prefWidth="128.0" />
+      <VBox fx:id="info" layoutX="-4.0" layoutY="156.0" prefHeight="290.0" prefWidth="332.0" visible="false">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="167.0" text="     Nom medicament    :" textFill="#190b5b">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="nommedi" prefHeight="34.0" prefWidth="178.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="77.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="161.0" text="     Quantité vendu       :" textFill="#210a5b">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="quantit" prefHeight="32.0" prefWidth="172.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="85.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="165.0" text="      Date de vente       : " textFill="#120943">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datepiker" prefHeight="30.0" prefWidth="168.0" promptText="Date de vente " />
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="165.0" text="     La somme payer  :" textFill="#220e54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="sommp" prefHeight="16.0" prefWidth="166.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="162.0" text="    Le reste payer le    :" textFill="#210843">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datrest" />
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="332.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="114.0" />
+                  <JFXButton onAction="#effectuervent" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: pink;" text="Ajouter au vente " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="353.0" layoutY="407.0" prefHeight="17.0" prefWidth="66.0" text="Total :" textFill="#510a0a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="648.0" layoutY="412.0" prefHeight="17.0" prefWidth="149.0" text="Le Rest a payer :" textFill="#4a0a0a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rrest" layoutX="780.0" layoutY="412.0" prefHeight="26.0" prefWidth="66.0" />
+      <JFXButton fx:id="imprimer" layoutX="952.0" layoutY="387.0" onAction="#actionbt" prefHeight="47.0" prefWidth="99.0" style="-fx-background-color: pink;" text="Imprimer" />
+   </children>
+</Pane>

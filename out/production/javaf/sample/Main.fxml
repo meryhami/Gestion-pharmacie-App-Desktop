@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchore" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="139.0" layoutY="251.0" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="text" prefHeight="54.0" prefWidth="301.0" promptText="user name" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXPasswordField fx:id="passw" prefHeight="34.0" prefWidth="300.0" promptText="password" />
+               </children>
+            </HBox>
+            <JFXButton fx:id="button" onAction="#entrer" prefHeight="25.0" prefWidth="306.0" style="-fx-background-color: pink;" text="Entrer" />
+         </children>
+      </VBox>
+      <Label fx:id="label" layoutX="141.0" layoutY="489.0" prefHeight="54.0" prefWidth="290.0" text="  !!! Les informations saisies ne correspondent pas. " textFill="#6b1414" visible="false" />
+      <Label fx:id="label2" layoutX="141.0" layoutY="489.0" prefHeight="54.0" prefWidth="290.0" text="  !!! Le login incorrect " textFill="#6b1414" visible="false" />
+      <ImageView fitHeight="44.0" fitWidth="54.0" layoutX="67.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@login.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="71.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@password.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>
